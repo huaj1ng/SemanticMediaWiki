@@ -7,6 +7,7 @@ use SMW\Tests\PHPUnitCompat;
 
 /**
  * @group semantic-mediawiki-integration
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -46,7 +47,7 @@ class SetupStoreMaintenanceTest extends SMWIntegrationTestCase {
 	}
 
 	public function testSetupStore_Delete() {
-		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( 'SMW\Maintenance\SetupStore' );
+		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( '\SMW\Maintenance\setupStore' );
 
 		$maintenanceRunner->setQuiet();
 
@@ -89,7 +90,7 @@ class SetupStoreMaintenanceTest extends SMWIntegrationTestCase {
 
 		$this->titleValidator->assertThatTitleIsKnown( $this->importedTitles );
 
-		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( 'SMW\Maintenance\SetupStore' );
+		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( '\SMW\Maintenance\setupStore' );
 
 		$maintenanceRunner->setMessageReporter(
 			$this->spyMessageReporter

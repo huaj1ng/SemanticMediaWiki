@@ -20,6 +20,7 @@ use SMWQuery as Query;
  * @group semantic-mediawiki-integration
  * @group semantic-mediawiki-query
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -45,7 +46,7 @@ class DisjunctionQueryDBIntegrationTest extends SMWIntegrationTestCase {
 		$this->semanticDataFactory = UtilityFactory::getInstance()->newSemanticDataFactory();
 		$this->queryParser = ApplicationFactory::getInstance()->getQueryFactory()->newQueryParser();
 
-	//	$this->getStore()->getSparqlDatabase()->deleteAll();
+	// $this->getStore()->getSparqlDatabase()->deleteAll();
 	}
 
 	protected function tearDown(): void {

@@ -17,6 +17,7 @@ use Title;
  * @group SMWExtension
  * @group semantic-mediawiki-integration
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -39,7 +40,7 @@ class SubSemanticDataDBIntegrationTest extends SMWIntegrationTestCase {
 	}
 
 	protected function tearDown(): void {
-		$pageDeleter= new PageDeleter();
+		$pageDeleter = new PageDeleter();
 
 		parent::tearDown();
 	}

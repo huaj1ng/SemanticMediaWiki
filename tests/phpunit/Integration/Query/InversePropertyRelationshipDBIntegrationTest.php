@@ -22,6 +22,7 @@ use SMWQuery as Query;
  * @group semantic-mediawiki-query
  *
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -95,7 +96,7 @@ class InversePropertyRelationshipDBIntegrationTest extends SMWIntegrationTestCas
 
 		$queryResult = $this->getStore()->getQueryResult( $query );
 
-		$this->assertEquals(
+		$this->assertSame(
 			1,
 			$queryResult->getCount()
 		);

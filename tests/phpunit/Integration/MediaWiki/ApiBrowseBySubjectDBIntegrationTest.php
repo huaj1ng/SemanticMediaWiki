@@ -13,6 +13,7 @@ use SMW\Tests\PHPUnitCompat;
 
 /**
  * @group semantic-mediawiki-integration
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -45,8 +46,8 @@ class ApiBrowseBySubjectDBIntegrationTest extends SMWIntegrationTestCase {
 
 		$resultData = $this->newBrowseBySubject( __METHOD__ )->getResultData();
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			$resultData
 		);
 
@@ -55,8 +56,8 @@ class ApiBrowseBySubjectDBIntegrationTest extends SMWIntegrationTestCase {
 			$this->serializerFactory->getDeserializerFor( $resultData['query'] )->deserialize( $resultData['query'] )
 		);
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			$this->newBrowseBySubject( __METHOD__, true )->getResultData()
 		);
 	}
@@ -72,8 +73,8 @@ class ApiBrowseBySubjectDBIntegrationTest extends SMWIntegrationTestCase {
 
 		$resultData = $this->newBrowseBySubject( __METHOD__ )->getResultData();
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			$resultData
 		);
 
@@ -82,8 +83,8 @@ class ApiBrowseBySubjectDBIntegrationTest extends SMWIntegrationTestCase {
 			$this->serializerFactory->getDeserializerFor( $resultData['query'] )->deserialize( $resultData['query'] )
 		);
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			$this->newBrowseBySubject( __METHOD__, true )->getResultData()
 		);
 	}
@@ -111,8 +112,8 @@ class ApiBrowseBySubjectDBIntegrationTest extends SMWIntegrationTestCase {
 
 		$resultData = $this->newBrowseBySubject( __METHOD__ )->getResultData();
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			$resultData
 		);
 
@@ -121,8 +122,8 @@ class ApiBrowseBySubjectDBIntegrationTest extends SMWIntegrationTestCase {
 			$this->serializerFactory->getDeserializerFor( $resultData['query'] )->deserialize( $resultData['query'] )
 		);
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			$this->newBrowseBySubject( __METHOD__, true )->getResultData()
 		);
 	}

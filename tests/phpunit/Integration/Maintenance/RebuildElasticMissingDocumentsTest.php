@@ -9,6 +9,7 @@ use SMW\Tests\PHPUnitCompat;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -44,7 +45,7 @@ class RebuildElasticMissingDocumentsTest extends SMWIntegrationTestCase {
 
 	public function testRun() {
 		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner(
-			'SMW\Maintenance\RebuildElasticMissingDocuments'
+			'\SMW\Maintenance\rebuildElasticMissingDocuments'
 		);
 
 		$maintenanceRunner->setMessageReporter( $this->spyMessageReporter );

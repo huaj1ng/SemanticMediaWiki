@@ -7,6 +7,7 @@ use SMW\Tests\Utils\UtilityFactory;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -75,7 +76,7 @@ class UpdateEntityCollationTest extends SMWIntegrationTestCase {
 
 		$this->titleValidator->assertThatTitleIsKnown( $this->importedTitles );
 
-		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( 'SMW\Maintenance\UpdateEntityCollation' );
+		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( '\SMW\Maintenance\updateEntityCollation' );
 		$maintenanceRunner->setQuiet()->run();
 	}
 

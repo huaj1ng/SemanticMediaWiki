@@ -20,6 +20,7 @@ use SMWQuery as Query;
  * @group semantic-mediawiki-query
  *
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -100,7 +101,7 @@ class GeneralQueryDBIntegrationTest extends SMWIntegrationTestCase {
 
 		$this->getStore()->updateData( $semanticData );
 
-		$this->assertEquals(
+		$this->assertSame(
 			0,
 			$this->searchForResultsThatCompareEqualToOnlySingularPropertyOf( $property )->getCount()
 		);

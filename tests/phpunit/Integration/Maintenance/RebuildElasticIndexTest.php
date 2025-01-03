@@ -8,6 +8,7 @@ use SMW\Services\ServicesFactory as ApplicationFactory;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -42,7 +43,7 @@ class RebuildElasticIndexTest extends SMWIntegrationTestCase {
 
 	public function testRun() {
 		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner(
-			'SMW\Maintenance\RebuildElasticIndex'
+			'\SMW\Maintenance\rebuildElasticIndex'
 		);
 
 		$maintenanceRunner->setMessageReporter( $this->spyMessageReporter );

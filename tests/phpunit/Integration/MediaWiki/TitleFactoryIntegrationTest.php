@@ -12,6 +12,7 @@ use Title;
  * @covers \SMW\MediaWiki\TitleFactory
  * @group SMW
  * @group semantic-mediawiki-integration
+ * @group Database
  * @group mediawiki-database
  *
  * @license GNU GPL v2+
@@ -33,7 +34,7 @@ class TitleFactoryIntegrationTest extends SMWIntegrationTestCase {
 		$out = $instance->newFromIDs( $input );
 
 		$this->assertCount( 1, $out );
-		$this->assertInternalType( 'array', $out );
+		$this->assertIsArray( $out );
 		$this->assertInstanceOf( Title::class, $out[0] );
 		$this->assertEquals( $title->getId(), $out[0]->getId() );
 	}

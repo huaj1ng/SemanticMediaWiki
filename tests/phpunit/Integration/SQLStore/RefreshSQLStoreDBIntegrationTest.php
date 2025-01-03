@@ -15,6 +15,7 @@ use WikiPage;
  * @group SMWExtension
  * @group semantic-mediawiki-integration
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -94,7 +95,7 @@ class RefreshSQLStoreDBIntegrationTest extends SMWIntegrationTestCase {
 	public function titleProvider() {
 		$provider = [];
 
-	//	$provider[] = array( NS_MAIN, 'withInterWiki', 'commons' );
+	// $provider[] = array( NS_MAIN, 'withInterWiki', 'commons' );
 		$provider[] = [ NS_MAIN, 'NormalTite', '' ];
 		$provider[] = [ NS_MAIN, 'UseUpdateJobs', '' ];
 

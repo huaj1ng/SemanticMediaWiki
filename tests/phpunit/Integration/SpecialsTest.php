@@ -37,6 +37,7 @@ use SpecialPageFactory;
  *
  * @group SMW
  * @group SMWExtension
+ * @group Database
  * @group medium
  */
 class SpecialsTest extends SMWIntegrationTestCase {
@@ -58,8 +59,7 @@ class SpecialsTest extends SMWIntegrationTestCase {
 	public function testSpecial( callable $specialPageProvider ) {
 		try {
 			$specialPageProvider()->execute( '' );
-		}
-		catch ( \Exception $exception ) {
+		} catch ( \Exception $exception ) {
 			if ( !( $exception instanceof \PermissionsError ) && !( $exception instanceof \ErrorPageError ) ) {
 				throw $exception;
 			}
@@ -93,7 +93,7 @@ class SpecialsTest extends SMWIntegrationTestCase {
 			// Check against available aliases
 			foreach ( $aliases as $n => $values ) {
 				foreach ( $values as $value ) {
-					if( $name === $value ) {
+					if ( $name === $value ) {
 						$found = true;
 						break;
 					}

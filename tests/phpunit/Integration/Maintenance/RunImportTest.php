@@ -8,6 +8,7 @@ use SMW\Tests\PHPUnitCompat;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -38,7 +39,7 @@ class RunImportTest extends SMWIntegrationTestCase {
 
 	public function testRun() {
 		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner(
-			'SMW\Maintenance\RunImport'
+			'\SMW\Maintenance\runImport'
 		);
 
 		$maintenanceRunner->setMessageReporter(

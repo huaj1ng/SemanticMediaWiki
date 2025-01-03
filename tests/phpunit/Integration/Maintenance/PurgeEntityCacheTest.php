@@ -7,6 +7,7 @@ use SMW\Tests\TestEnvironment;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -30,7 +31,7 @@ class PurgeEntityCacheTest extends SMWIntegrationTestCase {
 
 	public function testRun() {
 		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner(
-			'SMW\Maintenance\PurgeEntityCache'
+			'\SMW\Maintenance\purgeEntityCache'
 		);
 
 		$maintenanceRunner->setQuiet();

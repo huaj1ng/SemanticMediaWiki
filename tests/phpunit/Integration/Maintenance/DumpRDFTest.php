@@ -8,6 +8,7 @@ use SMW\Tests\PHPUnitCompat;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -35,7 +36,7 @@ class DumpRDFTest extends SMWIntegrationTestCase {
 
 	public function testRun() {
 		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner(
-			'SMW\Maintenance\dumpRDF'
+			'\SMW\Maintenance\dumpRDF'
 		);
 
 		$maintenanceRunner->setMessageReporter(

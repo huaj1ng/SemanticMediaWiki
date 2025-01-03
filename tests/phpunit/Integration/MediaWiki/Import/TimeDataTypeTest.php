@@ -14,6 +14,7 @@ use SMW\Tests\PHPUnitCompat;
  * @group SMWExtension
  * @group semantic-mediawiki-import
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -219,7 +220,6 @@ class TimeDataTypeTest extends SMWIntegrationTestCase {
 			$this->semanticDataValidator->assertThatPropertiesAreSet( $expectedPropertiesFromImport, $semanticData );
 			$this->assertBatchesOfDateValues( $expectedDateValuesBatches, $semanticData );
 		}
-
 	}
 
 	protected function assertBatchesOfDateValues( $assertionBatches, $semanticData ) {

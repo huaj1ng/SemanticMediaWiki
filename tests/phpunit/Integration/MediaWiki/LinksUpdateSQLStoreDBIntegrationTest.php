@@ -2,7 +2,7 @@
 
 namespace SMW\Tests\Integration\MediaWiki;
 
-use LinksUpdate;
+use MediaWiki\Deferred\LinksUpdate\LinksUpdate;
 use MediaWiki\MediaWikiServices;
 use ParserOutput;
 use SMW\Services\ServicesFactory;
@@ -15,6 +15,7 @@ use UnexpectedValueException;
 
 /**
  * @group semantic-mediawiki
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+

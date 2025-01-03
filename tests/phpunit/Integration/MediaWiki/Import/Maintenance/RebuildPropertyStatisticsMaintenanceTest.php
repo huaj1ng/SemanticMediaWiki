@@ -10,6 +10,7 @@ use SMW\Tests\Utils\UtilityFactory;
  * @group SMWExtension
  * @group semantic-mediawiki-import
  * @group mediawiki-database
+ * @group Database
  * @group medium
  *
  * @license GNU GPL v2+
@@ -66,7 +67,7 @@ class RebuildPropertyStatisticsMaintenanceTest extends SMWIntegrationTestCase {
 
 		$this->titleValidator->assertThatTitleIsKnown( $this->importedTitles );
 
-		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( 'SMW\Maintenance\RebuildPropertyStatistics' );
+		$maintenanceRunner = $this->runnerFactory->newMaintenanceRunner( '\SMW\Maintenance\rebuildPropertyStatistics' );
 		$maintenanceRunner->setQuiet()->run();
 	}
 

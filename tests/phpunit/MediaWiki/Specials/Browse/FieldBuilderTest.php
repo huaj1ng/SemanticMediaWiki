@@ -14,13 +14,13 @@ use SMW\Tests\PHPUnitCompat;
  *
  * @author mwjames
  */
-class FieldBuilderTest extends \PHPUnit_Framework_TestCase {
+class FieldBuilderTest extends \PHPUnit\Framework\TestCase {
 
 	use PHPUnitCompat;
 
 	public function testGetQueryFormData() {
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
+
 			FieldBuilder::getQueryFormData( 'Foo' )
 		);
 	}
@@ -28,8 +28,8 @@ class FieldBuilderTest extends \PHPUnit_Framework_TestCase {
 	public function testCreateLink() {
 		$parameters = [];
 
-		$this->assertInternalType(
-			'string',
+		$this->assertIsString(
+
 			FieldBuilder::createLink( 'Foo', $parameters )
 		);
 	}
